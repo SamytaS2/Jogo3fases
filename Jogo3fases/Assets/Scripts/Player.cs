@@ -68,6 +68,10 @@ public class NewBehaviourScript : MonoBehaviour
             anim.SetBool("Jump", false);
         }
 
+        if(collision.gameObject.tag == "EndOfLevel"){
+            GameController.instance.PassLvl();
+        }
+
         if(collision.gameObject.tag == "Spike"){
             GameController.instance.ShowGameOver();
             Destroy(gameObject);

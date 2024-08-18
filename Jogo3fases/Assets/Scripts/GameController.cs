@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
     public Text scoreText;
 
     public GameObject gameOver;
+    public GameObject endOfLvl;
 
     public static GameController instance;
     // Start is called before the first frame update
@@ -24,6 +25,10 @@ public class GameController : MonoBehaviour
 
     public void ShowGameOver(){
         gameOver.SetActive(true);
+    }
+    
+    public void PassLvl(){
+        endOfLvl.SetActive(true);
     }
     
     public void RestartGame(string lvlName){
